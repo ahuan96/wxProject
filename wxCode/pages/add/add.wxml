@@ -1,0 +1,51 @@
+<!--pages/add/add.wxml-->
+<view class="container card">
+  <view class="txt-row">
+    <view class="txt-label">选择颜色：</view>
+    <view class="txt-cont">
+      <view class="clolor-list">
+        <view bindtap='setColor' data-idx="1" class="{{colorIdx == '1' ?'active':''}}" style="background:#00b050;">
+        </view>
+        <view bindtap='setColor' data-idx="2" class="{{colorIdx == '2' ?'active':''}}" style="background:#980f29;">
+        </view>
+        <view bindtap='setColor' data-idx="3" class="{{colorIdx == '3' ?'active':''}}" style="background:#111111;">
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="txt-row">
+    <view class="txt-label">是否间隙：</view>
+    <view class="txt-cont">
+      <switch style="transform:scale(0.7)" bindchange="setGap" />
+    </view>
+  </view>
+  <view class="view-row">
+    <view class="word-box">
+      <view class="row">
+        <view class="space"></view>
+        <view class="cell {{'cell_style' + colorIdx}} {{gapIdx=='1'?'cell_space':''}}" wx:for="{{testWord}}"
+          wx:for-index="idx" wx:key="idx" wx:for-item="word">
+          <view>{{word}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="txt-row">
+    <view class="txt-label">选择分类：</view>
+    <view class="txt-cont">
+      <view class="type-list">
+        <view wx:for="{{typeList}}" wx:key="type_id" bindtap='setType' data-idx="{{item.type_id}}"
+          class="{{item.type_id == typeId ?'active':''}}">{{item.type_name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="txt-row">
+    <view class="txt-label">内容：</view>
+    <view class="txt-cont">
+      <textarea class="txt-area" value="{{content}}" bindinput='input_cont' placeholder="写下你想说的话" />
+      </view>
+ </view>
+ <view class="btn-box">
+   <view bindtap="publish" class="btn">发布</view>
+ </view>
+</view>

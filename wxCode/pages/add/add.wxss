@@ -1,0 +1,84 @@
+/* pages/add/add.wxss */
+page{
+  height: 100%;
+  background: #f1f1f1;
+}
+.container{
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  border: 1px solid #ebeef5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.txt-row{
+  margin: 20rpx 0;
+  padding: 20rpx;
+  line-height: 64rpx;
+}
+.txt-label{
+  height: 64rpx;
+  float: left;
+  width:160rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.txt-cont{
+  margin-left: 120rpx;
+}
+.clolor-list{
+  display: flex;
+  align-items: center;
+}
+.clolor-list view{
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  margin: 0 40rpx;
+  border: 13rpx solid #ffffff;
+}
+.clolor-list view.active{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.view-row{
+  display: flex;
+  justify-content: center;
+}
+.type-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.type-list view{
+  border: 1px solid #cccccc;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+
+.type-list view.active{
+  border: 1px solid #8ac6d1;
+  background: #67C23A;
+  color: #ffffff;
+}
+
+.txt-area{
+  border: 1px solid #cccccc;
+  height: 200rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+.btn-box{
+  display: flex;
+  justify-content: center;
+  margin-top: 60rpx;
+}

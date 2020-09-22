@@ -1,0 +1,123 @@
+/**app.wxss**/
+/* 公共样式 */
+
+/* 卡片阴影样式 */
+.card{
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  border: 1px solid #ebeef5;
+  background-color: #fff;
+  overflow: hidden;
+  color: #303133;
+  transition: .3s;
+  box-shadow: 0 2rpx 12rpx 0 rgba(0,0,0,.1);
+}
+
+/* 按钮样式 */
+.btn{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  color: #ffffff;
+  background: #409EFF;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing:100rpx；
+}
+/* 图片图标大小 */
+.icon-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 弹框 */
+.my-model{
+    position: fixed;
+    z-index:80;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(71, 72, 73, 0.53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-model .my-cont{
+  background: #fff;
+  border-radius: 20rpx;
+  width: 80%;
+  height: 60%;
+  position: relative;
+}
+.my-model .cont-img {
+  width: 60%;
+  margin: auto;
+}
+.my-model .cont-img image{
+  width: 100%;
+}
+.my-model .cont-txt{
+  padding: 40rpx;
+  font-size: 36rpx;
+  color: #444;
+  line-height: 40rpx;
+}
+.my-model .cont-btn{
+  width: 100%;
+  position: absolute;
+  height: 120rpx;
+  bottom: 0;
+}
+.my-model .cont-btn button{
+  width: 80%;
+  /* margin: 20rpx auto; */
+  /* line-height: 70rpx;
+  height: 70rpx; */
+  color: #409EFF;
+  font-size: 36rpx;
+  background: #fff;
+  border: 1rpx solid #ccc;
+}
+.my-model .cont-btn button::after{
+ border: none;
+ content:none;
+}
+/* 
+田字格字体
+*/
+.word-box .row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2rpx;
+}
+.word-box .space{
+  width: 0rpx;
+  height: 80rpx;
+}
+.word-box .cell{
+  width: 80rpx;
+  height: 80rpx;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAD1BMVEUAAABw051w050AsFD////k9m/oAAAAA3RSTlMAgMBakZ4lAAAAAWJLR0QEj2jZUQAAAERJREFUSMdjMCYSMBCvkIEoMNgUMgoMfoWj4TgajqPhOBqOgyocBQVRsZAiphhpCkfT42h6HA3H0XAcDcdhH47U7n0AAPZWQvGIuCx0AAAAAElFTkSuQmCC') no-repeat antiquewhite;
+  background-size: contain;
+  /* background-size: contain; */
+  font-size: 50rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin:8rpx 0rpx;
+  margin-left: -1rpx;
+}
+.word-box .cell_space{
+  margin:8rpx 2rpx;
+}
+
+.word-box .cell_style2{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAD1BMVEUAAAC7NEK7NEGYDyn////PpU03AAAAA3RSTlMAgMBakZ4lAAAAAWJLR0QEj2jZUQAAAERJREFUSMdjMCYSMBCvkIEoMNgUMgoMfoWj4TgajqPhOBqOgyocBQVRsZAiphhpCkfT42h6HA3H0XAcDcdhH47U7n0AAPZWQvGIuCx0AAAAAElFTkSuQmCC') antiquewhite;
+  background-size: contain;
+}
+
+.word-box .cell_style3{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQBAMAAAB8P++eAAAAD1BMVEUAAABmZmZlZWURERH////GmXa7AAAAA3RSTlMAgMBakZ4lAAAAAWJLR0QEj2jZUQAAAERJREFUSMdjMCYSMBCvkIEoMNgUMgoMfoWj4TgajqPhOBqOgyocBQVRsZAiphhpCkfT42h6HA3H0XAcDcdhH47U7n0AAPZWQvGIuCx0AAAAAElFTkSuQmCC') antiquewhite;
+  background-size: contain;
+}

@@ -1,0 +1,103 @@
+/**index.wxss**/
+
+.container{
+  padding-top: 100rpx;
+  font-family: "黑体";
+  background: #f8f8f8;
+  min-height: 100%;
+}
+page{
+  font-size: 28rpx;
+}
+ 
+/* 主体 */
+/* 分类栏 */
+.header {
+    box-sizing: border-box;
+    border-top: 1rpx solid #ececec;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    top: 0rpx;
+}
+.scroll_w{
+  width: 100%;
+  height: 100rpx;
+  white-space: nowrap;
+  background: #ffffff;
+}
+.header .item{
+  height: 65rpx;
+  width: 130rpx;
+  display: inline-block;
+  font-size: 34rpx;
+  color: #999999;
+  line-height: 65rpx;
+  border-radius: 80rpx;
+  margin: 15rpx;
+}
+.header .on{ 
+  color: #FFFFFF;  
+  background: linear-gradient(to right, #6E7AEA, #A25EF1);
+}   
+.swiper-box{
+  width: 100%;
+}
+.card{
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  border: 1px solid #ebeef5;
+  background-color: #fff;
+  overflow: hidden;
+  color: #303133;
+  transition: .3s;
+  box-shadow: 0 2rpx 12rpx 0 rgba(0,0,0,.1);
+}
+.word-box{
+  margin: 10rpx 0;
+}
+.card-head{
+  display: flex;
+  align-items: center;
+}
+.card-head image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.card-bot{
+  border-top: 1px solid #ccc;
+  display: flex;
+  font-size: 32rpx;
+  justify-content: space-between;
+}
+.card-bot view{
+  padding-top: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  align-items: center;
+}
+
+.card-bot .icon-img{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 10rpx;
+}
+
+.share-btn{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  border:none;
+background:none;
+}
+.share-btn::after {
+  border: none;
+}

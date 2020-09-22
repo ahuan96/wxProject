@@ -1,0 +1,45 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="head-box">
+    
+    <view>
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="nametxt">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="list-box">
+    <view class="list">
+    <view class="row" bindtap="toNav" data-idx="0">
+      <view class="row-lef">
+        <image class="icon-img" src="../../images/icon/like.png" alt=""></image>
+      </view>
+      <view class="row-txt">我的收藏</view>
+      <view class="row-rig">
+        <image class="icon-img" src="../../images/icon/right.png" alt=""></image>
+      </view>
+    </view>
+    <!-- <view class="row" bindtap="toNav" data-idx="1">
+      <view class="row-lef">
+        <image class="icon-img" src="../../images/icon/up.png" alt=""></image>
+      </view>
+      <view class="row-txt">我的发布</view>
+      <view class="row-rig">
+        <image class="icon-img" src="../../images/icon/right.png" alt=""></image>
+      </view>
+    </view> -->
+    <!-- <view class="row" bindtap="toNav" data-idx="2">
+      <view class="row-lef">
+        <image class="icon-img" src="../../images/icon/up.png" alt=""></image>
+      </view>
+      <view class="row-txt">我的草稿</view>
+      <view class="row-rig">
+        <image class="icon-img" src="../../images/icon/right.png" alt=""></image>
+      </view>
+    </view> -->
+    <view class="more">
+      <view>更多期待中...</view>
+    </view>
+  </view>
+  </view>
+</view>
+

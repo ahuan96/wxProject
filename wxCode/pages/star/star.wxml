@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 导航头 -->
+  <view class='header'>
+    <scroll-view class='scroll_w' scroll-x scroll-left="{{scrollLeft}}">
+      <block wx:for="{{topNavs}}" wx:key="type_id">
+        <view class="item {{currentTab==index ? 'on' : ''}}" bindtap='topNavChange' data-typeid="{{item.type_id}}" data-current="{{index}}">
+          {{item.type_name}}
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <swiper current="{{currentTab}}" bindchange="swiperChange" duration='300' class="swiper-box"
+    style="height:{{winHeight - 31}}px">
+    <!-- 全部 -->
+    <block wx:for="{{allList}}" wx:key="id">
+      <swiper-item>
+        <scroll-view scroll-y style="height:{{winHeight - 31}}px">
+          <block class="list" wx:for="{{item.list}}" wx:key="id">
+            <view class="card">
+              <view class="card-head">
+                <image src="{{item.avatarUrl}}" alt=""></image>
+                <view>{{item.author}}</view>
+              </view>
+              <view class="word-box">
+                <view class="row">
+                  <view class="space"></view>
+                  <view class="cell {{'cell_style' + item.color_id}} {{item.isgap=='1'?'cell_space':''}}"
+                    wx:for="{{item.sentence}}" wx:for-index="idx" wx:key="idx" wx:for-item="word">
+                    <view>{{word}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="card-bot">
+                <view>
+                  <image class=icon-img" src="../../images/icon/time.png" alt=""></image>
+                  <text class="time-txt">2020-9-11 15:17</text>
+                </view>
+                <view>
+                  <image bindtap="updateStar" data-isstar="{{item.isStar}}"  data-typeid="{{item.type_id}}" data-sid="{{item.s_id}}" data-item="{{item}}" class="icon-img" src="{{'../../images/icon/star'+(item.isStar=='1'?'2':'')+'.png'}}" alt=""></image>
+                  <text>{{item.stars}}</text>
+                </view>
+                <view>
+                  <image bindtap="updateZan" data-iszan="{{item.isZan}}"  data-typeid="{{item.type_id}}" data-sid="{{item.s_id}}"  class="icon-img" src="{{'../../images/icon/zan'+(item.isZan=='1'?'2':'')+'.png'}}" alt=""></image>
+                  <text>{{item.zans}}</text>
+                </view>
+                <view class="share-box">
+                  <image class="icon-img" src="../../images/icon/share.png" alt=""></image>
+                  <text></text>
+                  <button  class="share-btn"  open-type="share"></button>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>
+<view class="my-model" wx:if="{{showModel}}">
+    <view class="my-cont">
+      <view class="cont-img">
+        <image mode="widthFix" src="../../images/yixiu.png"></image>
+      </view>
+      <view class="cont-txt">为了给您更好的体验，请求获取您的用户信息哦^_^</view>
+      <view class="cont-btn">
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">允许授权</button>
+      </view>
+    </view>
+  </view>
